@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power VendaS - As melhores ofertas da internet</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contato (27)0000-0000">
+    <link rel="shortcut icon" href="https://img.icons8.com/pulsar-gradient/100/diamond.png" type="img/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/Style.css">
+</head>
+
+<body class="bg-gray-50 font-sans" id="topo-pagina">
+    
+    <!-- Cabeçalho da página -->
+    <header class="bg-blue-600 text-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-2">
+                        <a href="./index.html"><i class="fas fa-gem text-2xl"></i></a>
+                        <h1 class="text-2xl font-bold"><button id="topo-da-pagina">Power<span class="text-yellow-300">VendaS</span></button></h1>
+                    </div>
+                    <!-- <button class="md:hidden text-2xl" id="mobile-menu-button">
+                        <i class="fas fa-bars"></i>
+                    </button> -->
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-6 mt-4 md:mt-0" id="desktop-menu">
+                    <!-- <nav class="flex space-x-6">
+                        <a href="#topo-pagina" class="hover:text-yellow-300 font-medium">Home</a>
+                    </nav> -->
+
+                    <div class="relative search-bar max-w-lg flex-grow mx-8 hidden md:block">
+                        <input id="search-input" type="text" placeholder="Busque por produtos..." class="w-full py-2.5 px-4 pr-10 rounded-full text-gray-800 focus:outline-none">
+                        <i class="fas fa-search absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="hidden md:hidden mt-4 pb-2" id="mobile-menu">
+                <!-- <nav class="flex flex-col space-y-3">
+                    <a href="#topo-pagina" class="hover:text-yellow-300 font-medium">Home</a>
+                </nav> -->
+                <!-- <div class="relative search-bar max-w-lg flex-grow mx-8">
+                    <input id="search-input-mobile" type="text" placeholder="O que você está procurando?" class="w-full py-2.5 px-4 pr-10 rounded-full text-gray-800 focus:outline-none">
+                    <i class="fas fa-search absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                </div> -->
+
+            </div>
+        </div>
+        
+    </header>    
+
+        <section class="bg-gradient-to-r from-blue-500 to-blue-700 text-white py-12">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 mb-8 md:mb-0">
+                        <h2 class="text-4xl font-bold mb-4">As melhores ofertas da internet</h2>
+                        <p class="text-xl mb-6">Encontre produtos incríveis com descontos exclusivos todos os dias.</p>
+
+                        <div class="relative search-bar max-w-lg flex-grow mx-8">
+                            <input id="search-input-mobile" type="text" placeholder="O que você está procurando?" class="w-full py-2.5 px-4 pr-10 rounded-full text-gray-800 focus:outline-none">
+                            <i class="fas fa-search absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                        </div>
+
+                    </div>
+                    <div class="md:w-1/2 flex justify-center">
+                        <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&q=80" alt="Ofertas" class="rounded-lg shadow-xl max-h-80 object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <main class="container mx-auto px-4 py-8">
+        
+        <section id="category-section" class="mb-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Categorias</h2>
+            <div class="flex overflow-x-auto space-x-3 sm:space-x-4 pb-2 category-filter">
+                <button data-category="todos" class="category-btn whitespace-nowrap px-4 py-2 rounded-full font-medium bg-blue-600 text-white">Todos</button>
+                <button data-category="eletronicos" class="category-btn whitespace-nowrap px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full font-medium">Eletrônicos</button>
+                <button data-category="moda" class="category-btn whitespace-nowrap px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full font-medium">Moda</button>
+                <button data-category="casa" class="category-btn whitespace-nowrap px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full font-medium">Casa</button>
+                <button data-category="esportes" class="category-btn whitespace-nowrap px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full font-medium">Esportes</button>
+            </div>
+        </section>
+
+        <section id="products-section">
+            <div class="flex flex-col sm:flex-row justify-between items-center mb-6 gap-4">
+                <h2 class="text-2xl font-bold text-gray-800">Nossos Produtos</h2>
+                <div class="flex items-center gap-2">
+                    <label for="sort-options" class="text-sm font-medium">Ordenar por:</label>
+                    <select id="sort-options" class="border border-gray-300 rounded-md py-1.5 px-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <option value="default">Padrão</option>
+                        <option value="price-asc">Preço: Menor para Maior</option>
+                        <option value="price-desc">Preço: Maior para Menor</option>
+                    </select>
+                </div>
+            </div>
+            <div id="products-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"></div>
+            <div id="no-results" class="hidden text-center py-10">
+                <p class="text-xl text-gray-600">Nenhum produto encontrado.</p>
+                <p class="text-gray-500 mt-2">Tente ajustar sua busca ou filtro de categoria.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-800 text-white py-12">
+            
+        <div class="border-gray-700 mt-8 pt-8 text-center text-gray-400">
+            <p>&copy; 2025 PowerVendaS. Todos os direitos reservados.</p>
+        </div>
+
+    </footer>
+    
+    <button id="back-to-top" class="fixed bottom-6 right-6 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition duration-300 hidden z-30">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+        <!-- Botão do whatsapp -->
+        <!-- Adiciona um link para o WhatsApp com um número de telefone e uma função de envio -->
+
+        <!-- <a class="whatsapp-link" href="https://web.whatsapp.com/send?phone=5527" target="_blank" onclick="sendWhatsApp()">
+            <i class="fa fa-whatsapp"></i>
+        </a> -->
+
+    <script src="./js/Script.js"></script>
+</body>
+</html>

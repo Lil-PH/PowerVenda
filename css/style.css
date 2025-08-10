@@ -1,0 +1,145 @@
+/* Abaixo está a estilização da pagina index.html */
+
+/* Este seletor aplica o reset de estilização a todos os elementos da página */
+* {
+  /* Resetando estilização vinda do html*/
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+/* Este seletor aplica a animação de scroll suave em toda a página */
+html {
+
+  scroll-behavior: smooth; /* Faz animacao do scroll no html*/
+  scroll-padding-top: 100px; /* N deixa que os elementos fiquem abaixo do header*/
+
+}
+
+/* Criando o estilo do botão do whatsapp */
+.whatsapp-link{
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 1px 1px 2px #888;
+  z-index: 999;
+}
+
+/* Estilização do ícone do WhatsApp */
+.fa-whatsapp{
+  margin-top: 16px;
+}
+
+
+/* Efeito de hover nos cards de produto */
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Posição do selo de desconto */
+.discount-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+/* Estilização da barra de rolagem do filtro de categorias */
+.category-filter::-webkit-scrollbar {
+    height: 5px;
+}
+.category-filter::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+/* --- ESTILOS GERAIS PARA MODAIS --- */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 50;
+    display: flex;
+    justify-content: flex-end;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 0.3s, opacity 0.3s ease;
+}
+.modal-overlay.show {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s, opacity 0.3s ease;
+}
+
+.modal-content {
+    background-color: white;
+    width: 100%;
+    max-width: 450px;
+    height: 100%;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.2);
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+}
+.modal-overlay.show .modal-content {
+    transform: translateX(0);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+.close-modal-btn {
+    font-size: 1.8rem;
+    line-height: 1;
+    color: #9ca3af;
+}
+.close-modal-btn:hover {
+    color: #ef4444;
+}
+
+.modal-body {
+    padding: 1rem;
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+.modal-footer {
+    padding: 1rem;
+    background-color: #f9fafb;
+    border-top: 1px solid #e5e7eb;
+}
+
+/* --- ESTILOS DAS NOTIFICAÇÕES (TOAST) --- */
+.toast {
+    background-color: #22c55e; /* green-500 */
+    color: white;
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    transform: translateX(120%);
+    opacity: 0;
+    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+.toast.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+.toast.toast-error {
+    background-color: #ef4444; /* red-500 */
+}
